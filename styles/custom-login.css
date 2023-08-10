@@ -1,0 +1,11 @@
+body.login { background:#005214;}
+.login form {border-radius: 6px;}
+.login form input {border:1px solid #005214; border-radius:4px;}
+.login form .input, .login input[type="text"] {margin:16px 6px 16px 0;}
+.login h1 a {background-image: url('../images/logo-custom-login.png'); background-size: 175px 50px; height: 50px; width: 175px;}
+.login h1 { text-align: center; background-color: rgba(00,82,20,0.5); border-radius: 15px;}
+.login #backtoblog a, .login #nav a {color:#aaa;}
+.login p {text-align:center;}
+.login #backtoblog a, .login #nav a {color:#fff;}
+.wp-core-ui .button-primary {background:#478700; border:1px solid #005214; box-shadow: 0 1px 0 #005214;text-shadow:0 -1px 1px #005214, 1px 0 1px #005214, 0 1px 1px #005214, -1px 0 1px #005214;}
+.fondo-rotatorio {color:#ccc;}

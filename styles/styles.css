@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+    flex-direction: column;
+  }
+
+  main {
+    width: 1280px;
+    background: #fff;
+  }
+
+  header {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+  }
+
+  header h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+  }
+
+  header h2 img {
+    width: 120px;
+  }
+
+  header nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    border: 1px solid red;
+  }
+
+  header li {
+    padding: 1em;
+  }
+  
+  header a {
+    text-decoration: none;
+    color: #222;
+    font-size: 1.2em;
+  }
+  header nav ul#comprbantes-menu, header ul#empresas-menu, header ul#unidades-menu, header ul#usuario-menu {
+    display: none;
+  }
+  
+  .login-container, .add-container {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .login-form, .add-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-form h2 {
+    text-align: center;
+  }
+  
+  .form-group {
+    margin: 10px 0;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .form-add {
+    border: 2px solid #666;
+    border-radius: 15px;
+    padding: 4px 8px;
+    text-decoration: none;
+    font-size: 110%;
+    color:#222;
+  }
+  
+  button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
