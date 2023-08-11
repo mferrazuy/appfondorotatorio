@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-08-2023 a las 20:58:01
+-- Tiempo de generación: 11-08-2023 a las 22:28:28
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -24,25 +24,12 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `fr-empresas2`
---
-
-CREATE TABLE `fr-empresas2` (
-  `empre_ID` int(11) NOT NULL,
-  `empre_nomfantasia` varchar(250) NOT NULL,
-  `empre_razonsocial` varchar(250) NOT NULL,
-  `empre_telefono` varchar(30) NOT NULL,
-  `empre_direccion` varchar(80) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `fr_comprobantes2`
 --
 
 CREATE TABLE `fr_comprobantes2` (
   `comp_ID` bigint(20) UNSIGNED NOT NULL,
+  `comp_IDemp` int(11) NOT NULL,
   `comp_serie` varchar(6) NOT NULL,
   `comp_numero` bigint(20) NOT NULL,
   `comp_tipo` varchar(15) NOT NULL,
@@ -51,6 +38,35 @@ CREATE TABLE `fr_comprobantes2` (
   `comp_moneda` tinyint(3) UNSIGNED NOT NULL,
   `comp_importe` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+--
+-- Volcado de datos para la tabla `fr_comprobantes2`
+--
+
+INSERT INTO `fr_comprobantes2` (`comp_ID`, `comp_IDemp`, `comp_serie`, `comp_numero`, `comp_tipo`, `comp_fecha`, `comp_unidad`, `comp_moneda`, `comp_importe`) VALUES
+(1, 1, 'A', 111123456, 'contado', '2023-07-03', 1, 1, 1500);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `fr_empresas2`
+--
+
+CREATE TABLE `fr_empresas2` (
+  `empre_ID` int(11) NOT NULL,
+  `empre_rut` varchar(16) NOT NULL,
+  `empre_nomfantasia` varchar(250) NOT NULL,
+  `empre_razonsocial` varchar(250) NOT NULL,
+  `empre_telefono` varchar(30) NOT NULL,
+  `empre_direccion` varchar(80) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+--
+-- Volcado de datos para la tabla `fr_empresas2`
+--
+
+INSERT INTO `fr_empresas2` (`empre_ID`, `empre_rut`, `empre_nomfantasia`, `empre_razonsocial`, `empre_telefono`, `empre_direccion`) VALUES
+(1, '080123456789', 'TATA', 'Empresa TATA', '55551234', 'Avda. Artigas 987');
 
 -- --------------------------------------------------------
 
@@ -96,16 +112,17 @@ INSERT INTO `fr_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_
 --
 
 --
--- Indices de la tabla `fr-empresas2`
---
-ALTER TABLE `fr-empresas2`
-  ADD PRIMARY KEY (`empre_ID`);
-
---
 -- Indices de la tabla `fr_comprobantes2`
 --
 ALTER TABLE `fr_comprobantes2`
   ADD PRIMARY KEY (`comp_ID`);
+
+--
+-- Indices de la tabla `fr_empresas2`
+--
+ALTER TABLE `fr_empresas2`
+  ADD PRIMARY KEY (`empre_ID`),
+  ADD UNIQUE KEY `empre_rut` (`empre_rut`);
 
 --
 -- Indices de la tabla `fr_unidades2`
@@ -124,16 +141,16 @@ ALTER TABLE `fr_users`
 --
 
 --
--- AUTO_INCREMENT de la tabla `fr-empresas2`
---
-ALTER TABLE `fr-empresas2`
-  MODIFY `empre_ID` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `fr_comprobantes2`
 --
 ALTER TABLE `fr_comprobantes2`
-  MODIFY `comp_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `comp_ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `fr_empresas2`
+--
+ALTER TABLE `fr_empresas2`
+  MODIFY `empre_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `fr_unidades2`

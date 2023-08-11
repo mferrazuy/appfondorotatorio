@@ -24,12 +24,12 @@
         </h2>
         <nav id="nav-principal">
             <ul>
-                <li><a href="#">Comprobantes</a></li>
+                <li><a href="#"><img src="images/recibos.png" width="32" />Comprobantes</a></li>
 
-                <li><a href="#">Empresas</a></li>
-                <li><a href="#">Unidades</a></li>
-                <li><a href="#">Listados</a></li>
-                <li><a href="#">Usuario</a>
+                <li><a href="#"><img src="images/empresas.png" width="32" />Empresas</a></li>
+                <li><a href="#"><img src="images/unidades.png" width="32" />Unidades</a></li>
+                <li><a href="#"><img src="images/listados.png" width="32" />Listados</a></li>
+                <li><a href="#"><img src="images/usuario.png" width="32" />Usuario</a>
             </ul> 
             <ul id="comprobantes-menu">
               <li><a href="#">Agregar</a></li>

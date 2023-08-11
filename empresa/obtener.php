@@ -11,10 +11,7 @@ $resultado = mysqli_query($con, $query);
 
 if ($empresa = mysqli_fetch_assoc($resultado)) {
     // Devolver los datos del registro
-    echo "ID: " . $empresa["empre_ID"] . "<br>";
-    echo "rut: " . $empresa["empre_rut"] . "<br>";
-    echo "rut: " . $empresa["empre_nomfantasia"] . "<br>";
-    // Agregar más campos aquí
+    echo $empresa["empre_razonsocial"] ;
 } else {
     echo "Registro no encontrado.";
 }
