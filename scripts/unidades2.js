@@ -1,6 +1,6 @@
 /***************CODIGO ************************************** */
 const input_unidad = document.querySelector("#unidad-ejercito");
-let label_unidades = document.querySelector("#unidad-nombre");
+const label_unidades = document.querySelector("#unida-nombre");
 
 //const input_razon_social = document.querySelector("#razon-social");
 //console.log(input_unidad);
@@ -31,7 +31,7 @@ input_unidad.addEventListener('input', (evt) => {
         xhr.send();
         //console.log(input_rut.value);
     }  else {
-        label_unidades.innerHTML = "Unidades...";
+        resultadoDiv.innerHTML = "";
     }
 })
 //console.log (input_rut);
